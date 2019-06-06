@@ -7,7 +7,11 @@
     "server": "live-server public",
     "dev-server": "webpack-dev-server",
     "watch": "webpack --watch",
-    "test": "jest"
+    "build:dev": "webpack",
+    "build:prod": "webpack -p",
+    "test": "jest",
+    "start": "node server/server.js",
+    "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
     "babel-core": "6.25.0",
@@ -17,6 +21,7 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.4",
+    "express": "4.15.4",
     "jest": "20.0.4",
     "moment": "2.18.1",
     "node-sass": "4.12.0",
